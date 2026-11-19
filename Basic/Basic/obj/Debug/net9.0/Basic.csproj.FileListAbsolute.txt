@@ -12,3 +12,4 @@ F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Run\Basic\Basic\obj\Debug
 F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Run\Basic\Basic\obj\Debug\net9.0\Basic.pdb
 F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Run\Basic\Basic\obj\Debug\net9.0\Basic.genruntimeconfig.cache
 F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Run\Basic\Basic\obj\Debug\net9.0\ref\Basic.dll
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Run\Basic\Basic\obj\Debug\net9.0\Basic.sourcelink.json
