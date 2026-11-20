@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6B67B17C-B510-4C87-8BE5-614979A4CCEC}|Basic\\Basic.csproj|f:\\ujw_dev\\unity3\\custompackage\\assets\\custompackage\\c-run\\basic\\basic\\\uC608\uC2DC.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B67B17C-B510-4C87-8BE5-614979A4CCEC}|Basic\\Basic.csproj|solutionrelative:basic\\\uC608\uC2DC.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6B67B17C-B510-4C87-8BE5-614979A4CCEC}|Basic\\Basic.csproj|f:\\ujw_dev\\unity3\\custompackage\\assets\\custompackage\\c-run\\basic\\basic\\\uC0C1\uC810\uD398\uC774\uC9C0\uAD6C\uC131.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B67B17C-B510-4C87-8BE5-614979A4CCEC}|Basic\\Basic.csproj|solutionrelative:basic\\\uC0C1\uC810\uD398\uC774\uC9C0\uAD6C\uC131.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B67B17C-B510-4C87-8BE5-614979A4CCEC}|Basic\\Basic.csproj|f:\\ujw_dev\\unity3\\custompackage\\assets\\custompackage\\c-run\\basic\\basic\\\uBC18\uBCF5\uBB38.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B67B17C-B510-4C87-8BE5-614979A4CCEC}|Basic\\Basic.csproj|solutionrelative:basic\\\uBC18\uBCF5\uBB38.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6B67B17C-B510-4C87-8BE5-614979A4CCEC}|Basic\\Basic.csproj|f:\\ujw_dev\\unity3\\custompackage\\assets\\custompackage\\c-run\\basic\\basic\\\uBC30\uC5F4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B67B17C-B510-4C87-8BE5-614979A4CCEC}|Basic\\Basic.csproj|solutionrelative:basic\\\uBC30\uC5F4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B67B17C-B510-4C87-8BE5-614979A4CCEC}|Basic\\Basic.csproj|f:\\ujw_dev\\unity3\\custompackage\\assets\\custompackage\\c-run\\basic\\basic\\\uB370\uC774\uD130\uC758\uD750\uB984.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B67B17C-B510-4C87-8BE5-614979A4CCEC}|Basic\\Basic.csproj|solutionrelative:basic\\\uB370\uC774\uD130\uC758\uD750\uB984.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6B67B17C-B510-4C87-8BE5-614979A4CCEC}|Basic\\Basic.csproj|f:\\ujw_dev\\unity3\\custompackage\\assets\\custompackage\\c-run\\basic\\basic\\date.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B67B17C-B510-4C87-8BE5-614979A4CCEC}|Basic\\Basic.csproj|solutionrelative:basic\\date.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B67B17C-B510-4C87-8BE5-614979A4CCEC}|Basic\\Basic.csproj|f:\\ujw_dev\\unity3\\custompackage\\assets\\custompackage\\c-run\\basic\\basic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B67B17C-B510-4C87-8BE5-614979A4CCEC}|Basic\\Basic.csproj|solutionrelative:basic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6B67B17C-B510-4C87-8BE5-614979A4CCEC}|Basic\\Basic.csproj|f:\\ujw_dev\\unity3\\custompackage\\assets\\custompackage\\c-run\\basic\\basic\\\uC0C1\uC218\uC640\uC5F4\uAC70.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B67B17C-B510-4C87-8BE5-614979A4CCEC}|Basic\\Basic.csproj|solutionrelative:basic\\\uC0C1\uC218\uC640\uC5F4\uAC70.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,53 +31,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "\uC608\uC2DC.cs",
-              "DocumentMoniker": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\\uC608\uC2DC.cs",
-              "RelativeDocumentMoniker": "Basic\\\uC608\uC2DC.cs",
-              "ToolTip": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\\uC608\uC2DC.cs",
-              "RelativeToolTip": "Basic\\\uC608\uC2DC.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "\uC0C1\uC810\uD398\uC774\uC9C0\uAD6C\uC131.cs",
+              "DocumentMoniker": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\\uC0C1\uC810\uD398\uC774\uC9C0\uAD6C\uC131.cs",
+              "RelativeDocumentMoniker": "Basic\\\uC0C1\uC810\uD398\uC774\uC9C0\uAD6C\uC131.cs",
+              "ToolTip": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\\uC0C1\uC810\uD398\uC774\uC9C0\uAD6C\uC131.cs",
+              "RelativeToolTip": "Basic\\\uC0C1\uC810\uD398\uC774\uC9C0\uAD6C\uC131.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAcwG8AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-19T12:31:43.499Z",
+              "WhenOpened": "2026-11-20T12:28:38.6Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "\uBC18\uBCF5\uBB38.cs",
-              "DocumentMoniker": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\\uBC18\uBCF5\uBB38.cs",
-              "RelativeDocumentMoniker": "Basic\\\uBC18\uBCF5\uBB38.cs",
-              "ToolTip": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\\uBC18\uBCF5\uBB38.cs",
-              "RelativeToolTip": "Basic\\\uBC18\uBCF5\uBB38.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Title": "\uBC30\uC5F4.cs",
+              "DocumentMoniker": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\\uBC30\uC5F4.cs",
+              "RelativeDocumentMoniker": "Basic\\\uBC30\uC5F4.cs",
+              "ToolTip": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\\uBC30\uC5F4.cs",
+              "RelativeToolTip": "Basic\\\uBC30\uC5F4.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-19T12:04:14.004Z",
+              "WhenOpened": "2026-11-20T11:57:23.475Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "\uB370\uC774\uD130\uC758\uD750\uB984.cs",
-              "DocumentMoniker": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\\uB370\uC774\uD130\uC758\uD750\uB984.cs",
-              "RelativeDocumentMoniker": "Basic\\\uB370\uC774\uD130\uC758\uD750\uB984.cs",
-              "ToolTip": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\\uB370\uC774\uD130\uC758\uD750\uB984.cs",
-              "RelativeToolTip": "Basic\\\uB370\uC774\uD130\uC758\uD750\uB984.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAApAAAAAAAAAA==",
+              "Title": "Date.cs",
+              "DocumentMoniker": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\Date.cs",
+              "RelativeDocumentMoniker": "Basic\\Date.cs",
+              "ToolTip": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\Date.cs",
+              "RelativeToolTip": "Basic\\Date.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-19T11:12:03.89Z",
+              "WhenOpened": "2026-11-20T11:24:41.771Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\Program.cs",
-              "RelativeDocumentMoniker": "Basic\\Program.cs",
-              "ToolTip": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\Program.cs",
-              "RelativeToolTip": "Basic\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAPAAAAAAAAAA==",
+              "Title": "\uC0C1\uC218\uC640\uC5F4\uAC70.cs",
+              "DocumentMoniker": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\\uC0C1\uC218\uC640\uC5F4\uAC70.cs",
+              "RelativeDocumentMoniker": "Basic\\\uC0C1\uC218\uC640\uC5F4\uAC70.cs",
+              "ToolTip": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\\uC0C1\uC218\uC640\uC5F4\uAC70.cs",
+              "RelativeToolTip": "Basic\\\uC0C1\uC218\uC640\uC5F4\uAC70.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-18T11:12:07.068Z",
+              "WhenOpened": "2026-11-20T11:07:36.082Z",
               "EditorCaption": ""
             }
           ]
