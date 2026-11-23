@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6B67B17C-B510-4C87-8BE5-614979A4CCEC}|Basic\\Basic.csproj|f:\\ujw_dev\\unity3\\custompackage\\assets\\custompackage\\c-run\\basic\\basic\\\uC0C1\uC810\uD398\uC774\uC9C0\uAD6C\uC131.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B67B17C-B510-4C87-8BE5-614979A4CCEC}|Basic\\Basic.csproj|solutionrelative:basic\\\uC0C1\uC810\uD398\uC774\uC9C0\uAD6C\uC131.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6B67B17C-B510-4C87-8BE5-614979A4CCEC}|Basic\\Basic.csproj|f:\\ujw_dev\\unity3\\custompackage\\assets\\custompackage\\c-run\\basic\\basic\\\uD074\uB798\uC2A4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B67B17C-B510-4C87-8BE5-614979A4CCEC}|Basic\\Basic.csproj|solutionrelative:basic\\\uD074\uB798\uC2A4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B67B17C-B510-4C87-8BE5-614979A4CCEC}|Basic\\Basic.csproj|f:\\ujw_dev\\unity3\\custompackage\\assets\\custompackage\\c-run\\basic\\basic\\\uBC30\uC5F4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B67B17C-B510-4C87-8BE5-614979A4CCEC}|Basic\\Basic.csproj|solutionrelative:basic\\\uBC30\uC5F4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B67B17C-B510-4C87-8BE5-614979A4CCEC}|Basic\\Basic.csproj|f:\\ujw_dev\\unity3\\custompackage\\assets\\custompackage\\c-run\\basic\\basic\\date.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B67B17C-B510-4C87-8BE5-614979A4CCEC}|Basic\\Basic.csproj|solutionrelative:basic\\date.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B67B17C-B510-4C87-8BE5-614979A4CCEC}|Basic\\Basic.csproj|f:\\ujw_dev\\unity3\\custompackage\\assets\\custompackage\\c-run\\basic\\basic\\\uC0C1\uC218\uC640\uC5F4\uAC70.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B67B17C-B510-4C87-8BE5-614979A4CCEC}|Basic\\Basic.csproj|solutionrelative:basic\\\uC0C1\uC218\uC640\uC5F4\uAC70.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6B67B17C-B510-4C87-8BE5-614979A4CCEC}|Basic\\Basic.csproj|f:\\ujw_dev\\unity3\\custompackage\\assets\\custompackage\\c-run\\basic\\basic\\\uBA54\uC778.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B67B17C-B510-4C87-8BE5-614979A4CCEC}|Basic\\Basic.csproj|solutionrelative:basic\\\uBA54\uC778.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,53 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "\uC0C1\uC810\uD398\uC774\uC9C0\uAD6C\uC131.cs",
-              "DocumentMoniker": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\\uC0C1\uC810\uD398\uC774\uC9C0\uAD6C\uC131.cs",
-              "RelativeDocumentMoniker": "Basic\\\uC0C1\uC810\uD398\uC774\uC9C0\uAD6C\uC131.cs",
-              "ToolTip": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\\uC0C1\uC810\uD398\uC774\uC9C0\uAD6C\uC131.cs",
-              "RelativeToolTip": "Basic\\\uC0C1\uC810\uD398\uC774\uC9C0\uAD6C\uC131.cs",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAcwG8AAAApAAAAAAAAAA==",
+              "Title": "\uD074\uB798\uC2A4.cs",
+              "DocumentMoniker": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\\uD074\uB798\uC2A4.cs",
+              "RelativeDocumentMoniker": "Basic\\\uD074\uB798\uC2A4.cs",
+              "ToolTip": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\\uD074\uB798\uC2A4.cs",
+              "RelativeToolTip": "Basic\\\uD074\uB798\uC2A4.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-20T12:28:38.6Z",
+              "WhenOpened": "2026-11-23T23:28:34.253Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "\uBC30\uC5F4.cs",
-              "DocumentMoniker": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\\uBC30\uC5F4.cs",
-              "RelativeDocumentMoniker": "Basic\\\uBC30\uC5F4.cs",
-              "ToolTip": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\\uBC30\uC5F4.cs",
-              "RelativeToolTip": "Basic\\\uBC30\uC5F4.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAjAAAAAAAAAA==",
+              "Title": "\uBA54\uC778.cs",
+              "DocumentMoniker": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\\uBA54\uC778.cs",
+              "RelativeDocumentMoniker": "Basic\\\uBA54\uC778.cs",
+              "ToolTip": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\\uBA54\uC778.cs",
+              "RelativeToolTip": "Basic\\\uBA54\uC778.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-20T11:57:23.475Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Date.cs",
-              "DocumentMoniker": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\Date.cs",
-              "RelativeDocumentMoniker": "Basic\\Date.cs",
-              "ToolTip": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\Date.cs",
-              "RelativeToolTip": "Basic\\Date.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvxEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-20T11:24:41.771Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "\uC0C1\uC218\uC640\uC5F4\uAC70.cs",
-              "DocumentMoniker": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\\uC0C1\uC218\uC640\uC5F4\uAC70.cs",
-              "RelativeDocumentMoniker": "Basic\\\uC0C1\uC218\uC640\uC5F4\uAC70.cs",
-              "ToolTip": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\\uC0C1\uC218\uC640\uC5F4\uAC70.cs",
-              "RelativeToolTip": "Basic\\\uC0C1\uC218\uC640\uC5F4\uAC70.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-20T11:07:36.082Z",
+              "WhenOpened": "2026-11-23T23:22:23.38Z",
               "EditorCaption": ""
             }
           ]

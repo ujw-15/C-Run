@@ -107,7 +107,7 @@ namespace GameData
             {
                 Console.Write($"| {i + 1}. {items[i],-8} "); // | 1. (0)item |
 
-                if (i % 3 != 2)
+                if (i % 3 == 2)
                 {
                     Console.WriteLine("\n");
                 }
@@ -117,7 +117,6 @@ namespace GameData
             Console.WriteLine(message);
             Console.WriteLine();
             Console.WriteLine("1~9 : 구매 / ESC : 종료");
-            Console.Write("dkssud");
             
 
         }
