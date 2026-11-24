@@ -1,0 +1,15 @@
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\Basic\Leam\bin\Debug\net9.0\Leam.exe
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\Basic\Leam\bin\Debug\net9.0\Leam.deps.json
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\Basic\Leam\bin\Debug\net9.0\Leam.runtimeconfig.json
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\Basic\Leam\bin\Debug\net9.0\Leam.dll
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\Basic\Leam\bin\Debug\net9.0\Leam.pdb
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\Basic\Leam\obj\Debug\net9.0\Leam.GeneratedMSBuildEditorConfig.editorconfig
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\Basic\Leam\obj\Debug\net9.0\Leam.AssemblyInfoInputs.cache
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\Basic\Leam\obj\Debug\net9.0\Leam.AssemblyInfo.cs
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\Basic\Leam\obj\Debug\net9.0\Leam.csproj.CoreCompileInputs.cache
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\Basic\Leam\obj\Debug\net9.0\Leam.sourcelink.json
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\Basic\Leam\obj\Debug\net9.0\Leam.dll
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\Basic\Leam\obj\Debug\net9.0\refint\Leam.dll
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\Basic\Leam\obj\Debug\net9.0\Leam.pdb
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\Basic\Leam\obj\Debug\net9.0\Leam.genruntimeconfig.cache
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\Basic\Leam\obj\Debug\net9.0\ref\Leam.dll
