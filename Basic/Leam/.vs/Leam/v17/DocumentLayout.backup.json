@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Leam\\Basic\\Leam\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{560A6584-D3BD-4854-8103-EBC65233DA7E}|Leam.csproj|f:\\ujw_dev\\unity3\\custompackage\\assets\\custompackage\\c-leam\\basic\\leam\\class\uC608\uC2DC.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{560A6584-D3BD-4854-8103-EBC65233DA7E}|Leam.csproj|solutionrelative:class\uC608\uC2DC.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{560A6584-D3BD-4854-8103-EBC65233DA7E}|Leam.csproj|f:\\ujw_dev\\unity3\\custompackage\\assets\\custompackage\\c-leam\\basic\\leam\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{560A6584-D3BD-4854-8103-EBC65233DA7E}|Leam.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{560A6584-D3BD-4854-8103-EBC65233DA7E}|Leam.csproj|f:\\ujw_dev\\unity3\\custompackage\\assets\\custompackage\\c-leam\\basic\\leam\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{560A6584-D3BD-4854-8103-EBC65233DA7E}|Leam.csproj|solutionrelative:class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "class\uC608\uC2DC.cs",
-              "DocumentMoniker": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Leam\\Basic\\Leam\\class\uC608\uC2DC.cs",
-              "RelativeDocumentMoniker": "class\uC608\uC2DC.cs",
-              "ToolTip": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Leam\\Basic\\Leam\\class\uC608\uC2DC.cs",
-              "RelativeToolTip": "class\uC608\uC2DC.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAAAEEAAAAMAAAAAAAAAA==",
+              "Title": "Class1.cs",
+              "DocumentMoniker": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Leam\\Basic\\Leam\\Class1.cs",
+              "RelativeDocumentMoniker": "Class1.cs",
+              "ToolTip": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Leam\\Basic\\Leam\\Class1.cs*",
+              "RelativeToolTip": "Class1.cs*",
+              "ViewState": "AgIAADMCAAAAAAAAAAAkwJsCAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-24T12:17:49.856Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Leam\\Basic\\Leam\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Leam\\Basic\\Leam\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-24T11:13:17.702Z",
+              "WhenOpened": "2026-11-25T11:50:35.131Z",
               "EditorCaption": ""
             }
           ]

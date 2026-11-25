@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="class예시.cs" />
     <Compile Remove="Program.cs" />
   </ItemGroup>
 

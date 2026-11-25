@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>객체지향 턴제 RPG</title>
+
+<style>
+  :root {
+    --bg-color: #12151c;
+    --panel-bg: #1e232e;
+    --border-color: #2f3747;
+    --text-main: #e2e8f0;
+    --text-muted: #94a3b8;
+    --accent-blue: #38bdf8;
+    --accent-green: #4ade80;
+    --accent-red: #f87171;
+    --accent-gold: #fbbf24;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:
+      "Malgun Gothic",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      sans-serif;
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 16px;
+  }
+
+  #game-container {
+    width: 100%;
+    max-width: 900px;
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+  }
+
+  header {
+    background: #161a22;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+
+  header h1 {
+    font-size: 1.15rem;
+    color: var(--accent-blue);
+  }
+
+  .badge {
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #262d3d;
+    color: var(--text-muted);
+  }
+
+  button {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--text-main);
+    transition: 0.15s;
+  }
+
+  button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+  }
+
+  button:focus-visible {
+    outline: 3px solid var(--accent-gold);
+    outline-offset: 4px;
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+
+  /* 직업 선택 화면 */
+  #setup-screen {
+    padding: 36px 20px;
+    text-align: center;
+  }
+
+  #setup-screen h2 {
+    margin-bottom: 10px;
+  }
+
+  #setup-screen p {
+    color: var(--text-muted);
+    margin-bottom: 28px;
+    font-size: 0.9rem;
+  }
+
+  .class-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .class-card {
+    background: #252b38;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    padding: 24px 16px;
+    font-weight: normal;
+    user-select: none;
+  }
+
+  .class-card:hover,
+  .class-card:active {
+    border-color: var(--accent-blue);
+    transform: translateY(-3px);
+    background: #2b3242;
+  }
+
+  .class-name {
+    display: block;
+    color: var(--accent-blue);
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .class-card .stats {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* 메인 게임 화면 */
+  #main-screen {
+    display: none;
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  #field-entities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .entity-card {
+    width: 100%;
+    background: #252b38;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 14px;
+    position: relative;
+    text-align: left;
+    font-weight: normal;
+    user-select: none;
+  }
+
+  .entity-card:hover {
+    border-color: #4b5563;
+  }
+
+  .entity-card.selected {
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 12px rgba(251, 191, 36, 0.25);
+    background: #2a3140;
+  }
+
+  .entity-card.dead {
+    opacity: 0.4;
+    filter: grayscale(1);
+  }
+
+  .entity-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .entity-name {
+    font-weight: bold;
+    font-size: 0.95rem;
+  }
+
+  .entity-type {
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: #161a22;
+    color: var(--text-muted);
+  }
+
+  .interfaces {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+
+  .tag-dmg,
+  .tag-int {
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+
+  .tag-dmg {
+    border: 1px solid var(--accent-blue);
+    color: var(--accent-blue);
+  }
+
+  .tag-int {
+    border: 1px solid var(--accent-green);
+    color: var(--accent-green);
+  }
+
+  .hp-bar-bg {
+    display: block;
+    width: 100%;
+    height: 8px;
+    background: #12151c;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 6px;
+  }
+
+  .hp-bar-fill {
+    display: block;
+    height: 100%;
+    background: var(--accent-red);
+    transition: width 0.25s ease;
+  }
+
+  .hp-text {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-align: right;
+    margin-top: 4px;
+  }
+
+  .bottom-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+  }
+
+  .player-panel {
+    background: #161a22;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 16px;
+  }
+
+  .player-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 12px;
+    font-size: 0.9rem;
+  }
+
+  .stat-box {
+    background: #252b38;
+    padding: 8px 12px;
+    border-radius: 6px;
+  }
+
+  .stat-box span {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    display: block;
+  }
+
+  .actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .btn-attack {
+    background: var(--accent-red);
+    color: #12151c;
+  }
+
+  .btn-skill {
+    background: var(--accent-blue);
+    color: #12151c;
+  }
+
+  .btn-interact {
+    background: var(--accent-green);
+    color: #12151c;
+    grid-column: span 2;
+  }
+
+  .btn-next {
+    background: var(--accent-gold);
+    color: #12151c;
+    grid-column: span 2;
+  }
+
+  .btn-restart {
+    grid-column: span 2;
+    background: #303b4c;
+    color: var(--text-main);
+  }
+
+  .help {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-top: 14px;
+  }
+
+  .log-panel {
+    background: #12151c;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 14px;
+    height: 300px;
+    overflow-y: auto;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .log-entry {
+    margin-bottom: 6px;
+    border-bottom: 1px dashed #1e232e;
+    padding-bottom: 4px;
+  }
+
+  .log-dmg { color: var(--accent-red); }
+  .log-int { color: var(--accent-green); }
+  .log-sys { color: var(--accent-gold); }
+  .log-info { color: var(--accent-blue); }
+
+  @media (max-width: 420px) {
+    body {
+      padding: 8px;
+    }
+
+    header {
+      padding: 16px;
+      flex-wrap: wrap;
+    }
+
+    .bottom-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>
+</head>
+
+<body>
+<div id="game-container">
+  <header>
+    <h1>⚔️ 객체지향 턴제 RPG</h1>
+    <span class="badge" id="stage-badge">직업 선택 대기</span>
+  </header>
+
+  <!-- 직업 선택: 실제 button 요소이므로 클릭과 키보드 입력을 지원합니다. -->
+  <div id="setup-screen">
+    <h2>영웅(Hero) 클래스를 선택하세요</h2>
+    <p>카드를 클릭하면 선택한 직업으로 게임을 시작합니다.</p>
+
+    <div class="class-grid" id="class-selector">
+      <button type="button" class="class-card" data-hero="Warrior">
+        <span class="class-name">🛡️ 전사 (Warrior)</span>
+        <span class="stats">
+          HP: 150 | ATK: 20<br>
+          스킬: 방패 강타 (1.8배 피해)
+        </span>
+      </button>
+
+      <button type="button" class="class-card" data-hero="Archer">
+        <span class="class-name">🏹 궁수 (Archer)</span>
+        <span class="stats">
+          HP: 110 | ATK: 26<br>
+          스킬: 더블 샷 (2회 연속 공격)
+        </span>
+      </button>
+
+      <button type="button" class="class-card" data-hero="Mage">
+        <span class="class-name">🔮 마법사 (Mage)</span>
+        <span class="stats">
+          HP: 90 | ATK: 34<br>
+          스킬: 파이어볼 (전체 광역 피해)
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <!-- 직업을 선택하면 표시되는 전투 화면 -->
+  <div id="main-screen">
+    <div class="section-title">
+      <span>필드 개체: 클릭하여 대상 선택</span>
+      <span id="turn-indicator" style="color: var(--accent-gold);">
+        플레이어 턴
+      </span>
+    </div>
+
+    <div id="field-entities"></div>
+
+    <div class="bottom-grid">
+      <div class="player-panel">
+        <div class="entity-header">
+          <strong id="p-name">영웅</strong>
+          <span class="tag-dmg">IDamageable</span>
+        </div>
+
+        <div class="hp-bar-bg">
+          <div class="hp-bar-fill" id="p-hp-bar" style="width: 100%;"></div>
+        </div>
+        <div class="hp-text" id="p-hp-text">100 / 100</div>
+
+        <div class="player-stats">
+          <div class="stat-box">
+            <span>공격력 (ATK)</span>
+            <strong id="p-atk">0</strong>
+          </div>
+
+          <div class="stat-box">
+            <span>보유 골드</span>
+            <strong id="p-gold" style="color: var(--accent-gold);">0 G</strong>
+          </div>
+        </div>
+
+        <div class="actions" id="action-buttons">
+          <button
+            type="button"
+            class="btn-attack"
+            id="btn-atk"
+            data-action="attack">
+            ⚔️ 기본 공격
+          </button>
+
+          <button
+            type="button"
+            class="btn-skill"
+            id="btn-skl"
+            data-action="skill">
+            ✨ 고유 스킬
+          </button>
+
+          <button
+            type="button"
+            class="btn-interact"
+            id="btn-int"
+            data-action="interact">
+            🤝 상호작용
+          </button>
+
+          <button
+            type="button"
+            class="btn-next"
+            id="btn-next"
+            data-action="next"
+            hidden>
+            다음 스테이지
+          </button>
+
+          <button
+            type="button"
+            class="btn-restart"
+            id="btn-restart"
+            data-action="restart">
+            직업 다시 선택
+          </button>
+        </div>
+
+        <p class="help">
+          적을 선택하고 공격 또는 스킬을 누르세요.
+          행동 후 생존한 적이 반격합니다.
+          상호작용도 1턴을 사용합니다.
+        </p>
+      </div>
+
+      <div
+        class="log-panel"
+        id="battle-log"
+        role="log"
+        aria-live="polite"
+        aria-label="전투 기록">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+'use strict';
+
+function initializeGame() {
+  /*
+   * 1. 인터페이스 규약
+   *
+   * JavaScript에는 C#처럼 interface를 선언하는 문법이 없습니다.
+   * 대신 필요한 메서드가 있는지를 확인합니다.
+   *
+   * takeDamage()가 있다 → 피해를 받을 수 있다.
+   * interact()가 있다   → 상호작용할 수 있다.
+   */
+  const Interfaces = {
+    IDamageable: obj =>
+      obj != null && typeof obj.takeDamage === 'function',
+
+    IInteractable: obj =>
+      obj != null && typeof obj.interact === 'function'
+  };
+
+  /*
+   * 2. 공통 부모 클래스
+   *
+   * Character: 이름, 체력, 공격력을 가진 캐릭터의 공통 설계.
+   * Prop: 보물상자, 회복샘 같은 사물의 공통 설계.
+   *
+   * new.target 검사를 통해 부모 클래스 자체의 직접 생성을 막습니다.
+   */
+  class Character {
+    constructor(name, maxHp, atk) {
+      if (new.target === Character) {
+        throw new Error('Character는 직접 생성할 수 없습니다.');
+      }
+
+      this.name = name;
+      this.maxHp = maxHp;
+      this.hp = maxHp;
+      this.atk = atk;
+    }
+
+    isAlive() {
+      return this.hp > 0;
+    }
+  }
+
+  class Prop {
+    constructor(name) {
+      if (new.target === Prop) {
+        throw new Error('Prop은 직접 생성할 수 없습니다.');
+      }
+
+      this.name = name;
+      this.isUsed = false;
+    }
+  }
+
+  /*
+   * 3. 영웅 계층
+   *
+   * Hero가 공통 기능을 제공하고,
+   * Warrior / Archer / Mage가 useSkill()을 각각 다르게 구현합니다.
+   * 같은 메서드 호출이 직업별로 다르게 동작하는 것이 다형성입니다.
+   */
+  class Hero extends Character {
+    constructor(name, maxHp, atk) {
+      super(name, maxHp, atk);
+
+      if (new.target === Hero) {
+        throw new Error('Hero는 직접 생성할 수 없습니다.');
+      }
+
+      this.gold = 50;
+    }
+
+    takeDamage(amount) {
+      this.hp = Math.max(0, this.hp - amount);
+
+      log(
+        `[피격] ${this.name}: ${amount} 피해! 남은 HP ${this.hp}`,
+        'log-dmg'
+      );
+    }
+  }
+
+  class Warrior extends Hero {
+    constructor() {
+      super('전사 (Warrior)', 150, 20);
+    }
+
+    useSkill(targets, primaryTarget) {
+      const damage = Math.floor(this.atk * 1.8);
+
+      log(`[스킬] ${this.name}의 방패 강타!`, 'log-info');
+      primaryTarget.takeDamage(damage);
+    }
+  }
+
+  class Archer extends Hero {
+    constructor() {
+      super('궁수 (Archer)', 110, 26);
+    }
+
+    useSkill(targets, primaryTarget) {
+      const damage = Math.floor(this.atk * 0.85);
+
+      log(`[스킬] ${this.name}의 더블 샷!`, 'log-info');
+
+      primaryTarget.takeDamage(damage);
+
+      // 첫 번째 공격으로 대상이 쓰러졌다면 두 번째 공격은 하지 않습니다.
+      if (primaryTarget.isAlive()) {
+        primaryTarget.takeDamage(damage);
+      }
+    }
+  }
+
+  class Mage extends Hero {
+    constructor() {
+      super('마법사 (Mage)', 90, 34);
+    }
+
+    useSkill(targets) {
+      const damage = Math.floor(this.atk * 1.1);
+
+      log(
+        `[스킬] ${this.name}의 파이어볼! 피격 가능한 모든 대상 공격!`,
+        'log-info'
+      );
+
+      targets.forEach(target => {
+        if (
+          Interfaces.IDamageable(target) &&
+          target.isAlive()
+        ) {
+          target.takeDamage(damage);
+        }
+      });
+    }
+  }
+
+  /*
+   * 4. 적 계층
+   *
+   * 적은 Character의 체력과 공격력을 물려받습니다.
+   * 보상은 적을 처치했을 때 한 번만 지급합니다.
+   */
+  class Enemy extends Character {
+    constructor(name, maxHp, atk, reward) {
+      super(name, maxHp, atk);
+
+      this.reward = reward;
+      this.rewardPaid = false;
+    }
+
+    takeDamage(amount) {
+      if (!this.isAlive()) return;
+
+      this.hp = Math.max(0, this.hp - amount);
+
+      log(
+        `[공격] ${this.name}: ${amount} 피해 ` +
+        `(HP ${this.hp}/${this.maxHp})`,
+        'log-dmg'
+      );
+
+      if (!this.isAlive() && !this.rewardPaid) {
+        this.rewardPaid = true;
+        state.hero.gold += this.reward;
+
+        log(
+          `[처치] ${this.name} · ${this.reward} G 획득`,
+          'log-sys'
+        );
+      }
+    }
+  }
+
+  class Dragon extends Enemy {
+    constructor() {
+      super('드래곤', 170, 12, 100);
+    }
+  }
+
+  /*
+   * 5. 사물 계층
+   *
+   * 상속: "어떤 종류인가?"
+   * 능력: "무엇을 할 수 있는가?"
+   *
+   * 보물상자와 회복샘은 interact()를 제공하지만,
+   * 배럴은 takeDamage()를 제공합니다.
+   */
+  class Chest extends Prop {
+    constructor() {
+      super('보물상자');
+    }
+
+    interact(hero) {
+      if (this.isUsed) return;
+
+      this.isUsed = true;
+      hero.gold += 30;
+
+      log(
+        '[상호작용] 보물상자를 열어 30 G를 얻었습니다.',
+        'log-int'
+      );
+    }
+  }
+
+  class Fountain extends Prop {
+    constructor() {
+      super('회복샘');
+    }
+
+    interact(hero) {
+      if (this.isUsed) return;
+
+      this.isUsed = true;
+
+      // 최대 체력을 넘지 않는 범위에서 최대 45만큼 회복합니다.
+      const restored = Math.min(45, hero.maxHp - hero.hp);
+      hero.hp += restored;
+
+      log(
+        `[상호작용] 회복샘에서 체력 ${restored} 회복!`,
+        'log-int'
+      );
+    }
+  }
+
+  class Barrel extends Prop {
+    constructor() {
+      super('나무 배럴');
+
+      this.maxHp = 25;
+      this.hp = 25;
+    }
+
+    isAlive() {
+      return this.hp > 0;
+    }
+
+    takeDamage(amount) {
+      if (!this.isAlive()) return;
+
+      this.hp = Math.max(0, this.hp - amount);
+
+      log(
+        `[공격] ${this.name}: ${amount} 피해`,
+        'log-dmg'
+      );
+
+      if (!this.isAlive()) {
+        state.hero.gold += 15;
+
+        log(
+          '[발견] 배럴 안에서 15 G 획득!',
+          'log-sys'
+        );
+      }
+    }
+  }
+
+  /*
+   * 6. 게임 상태
+   *
+   * 화면에 표시할 실제 데이터는 state에 보관합니다.
+   * render()는 이 데이터를 읽어 화면을 다시 그립니다.
+   */
+  const $ = id => document.getElementById(id);
+
+  const state = {
+    hero: null,
+    entities: [],
+    selected: -1,
+    stage: 1,
+    turn: 1,
+    ended: false,
+    cleared: false,
+    busy: false
+  };
+
+  const heroTypes = {
+    Warrior,
+    Archer,
+    Mage
+  };
+
+  // 행동 기록은 최신 100개까지만 보관합니다.
+  function log(message, className = 'log-info') {
+    const entry = document.createElement('div');
+
+    entry.className = `log-entry ${className}`;
+
+    // textContent를 사용하면 메시지를 HTML이 아닌 글자로 표시합니다.
+    entry.textContent = message;
+
+    const panel = $('battle-log');
+    panel.appendChild(entry);
+
+    while (panel.children.length > 100) {
+      panel.firstElementChild.remove();
+    }
+
+    panel.scrollTop = panel.scrollHeight;
+  }
+
+  // 살아 있거나 아직 사용하지 않은 개체만 선택 가능합니다.
+  function available(entity) {
+    if (!entity) return false;
+
+    if (Interfaces.IDamageable(entity)) {
+      return entity.isAlive();
+    }
+
+    return !entity.isUsed;
+  }
+
+  function startGame(heroType) {
+    if (
+      !Object.prototype.hasOwnProperty.call(heroTypes, heroType)
+    ) {
+      return;
+    }
+
+    state.hero = new heroTypes[heroType]();
+    state.stage = 1;
+    state.turn = 1;
+    state.ended = false;
+    state.busy = false;
+
+    $('battle-log').replaceChildren();
+
+    $('setup-screen').style.display = 'none';
+    $('main-screen').style.display = 'block';
+
+    log(
+      `${state.hero.name}의 모험을 시작합니다.`,
+      'log-sys'
+    );
+
+    loadStage();
+    $('btn-atk').focus();
+  }
+
+  function loadStage() {
+    let enemies;
+
+    if (state.stage === 1) {
+      enemies = [
+        new Enemy('슬라임', 40, 4, 15),
+        new Enemy('고블린', 55, 6, 20)
+      ];
+    } else if (state.stage === 2) {
+      enemies = [
+        new Enemy('오크', 75, 7, 30),
+        new Enemy('늑대', 50, 5, 20)
+      ];
+    } else {
+      enemies = [new Dragon()];
+    }
+
+    state.entities = [
+      ...enemies,
+      new Barrel(),
+      new Chest(),
+      new Fountain()
+    ];
+
+    state.selected = 0;
+    state.cleared = false;
+
+    log(
+      `[스테이지 ${state.stage}] 적을 모두 처치하세요.`,
+      'log-sys'
+    );
+
+    render();
+  }
+
+  /*
+   * 7. 화면 갱신
+   *
+   * 선택된 대상에 따라 사용할 수 있는 버튼만 활성화합니다.
+   * 예: 보물상자 선택 → 공격 불가, 상호작용 가능.
+   */
+  function render() {
+    if (!state.hero) return;
+
+    const hero = state.hero;
+    const target = state.entities[state.selected];
+    const canPlay = !state.ended && !state.busy;
+
+    $('stage-badge').textContent =
+      `스테이지 ${state.stage} / 3 · ${state.turn}턴`;
+
+    $('turn-indicator').textContent = state.ended
+      ? '모험 종료'
+      : state.cleared
+        ? '스테이지 클리어'
+        : '플레이어 턴';
+
+    $('p-name').textContent = hero.name;
+    $('p-hp-bar').style.width =
+      `${hero.hp / hero.maxHp * 100}%`;
+    $('p-hp-text').textContent =
+      `${hero.hp} / ${hero.maxHp}`;
+    $('p-atk').textContent = hero.atk;
+    $('p-gold').textContent = `${hero.gold} G`;
+
+    const field = $('field-entities');
+    field.replaceChildren();
+
+    state.entities.forEach((entity, index) => {
+      const card = document.createElement('button');
+      const isAvailable = available(entity);
+      const damageable = Interfaces.IDamageable(entity);
+      const interactable = Interfaces.IInteractable(entity);
+      const type = entity instanceof Enemy ? '적' : '사물';
+
+      card.type = 'button';
+      card.className = 'entity-card';
+
+      if (index === state.selected) {
+        card.classList.add('selected');
+      }
+
+      if (!isAvailable) {
+        card.classList.add('dead');
+      }
+
+      card.dataset.index = String(index);
+      card.disabled = !isAvailable || state.ended;
+
+      card.setAttribute(
+        'aria-pressed',
+        String(index === state.selected)
+      );
+
+      let statusHtml;
+
+      if (damageable) {
+        statusHtml = `
+          <span class="hp-bar-bg">
+            <span
+              class="hp-bar-fill"
+              style="width: ${entity.hp / entity.maxHp * 100}%">
+            </span>
+          </span>
+          <span class="hp-text">
+            ${entity.hp} / ${entity.maxHp}
+          </span>
+        `;
+      } else {
+        const description = entity.isUsed
+          ? '사용 완료'
+          : entity instanceof Fountain
+            ? '체력 +45 · 1회'
+            : '골드 +30 · 1회';
+
+        statusHtml = `
+          <span class="hp-text">${description}</span>
+        `;
+      }
+
+      // 이름은 위 클래스에서 정의한 고정 문자열을 사용합니다.
+      card.innerHTML = `
+        <span class="entity-header">
+          <span class="entity-name">${entity.name}</span>
+          <span class="entity-type">${type}</span>
+        </span>
+
+        <span class="interfaces">
+          ${
+            damageable
+              ? '<span class="tag-dmg">피격 가능 · IDamageable</span>'
+              : ''
+          }
+          ${
+            interactable
+              ? '<span class="tag-int">상호작용 · IInteractable</span>'
+              : ''
+          }
+        </span>
+
+        ${statusHtml}
+      `;
+
+      field.appendChild(card);
+    });
+
+    $('btn-atk').disabled =
+      !canPlay ||
+      !Interfaces.IDamageable(target) ||
+      !available(target);
+
+    // 마법사는 광역 공격이므로 선택 대상이 상자여도 스킬 사용이 가능합니다.
+    const canUseSkill = hero instanceof Mage
+      ? state.entities.some(
+          entity =>
+            Interfaces.IDamageable(entity) &&
+            entity.isAlive()
+        )
+      : Interfaces.IDamageable(target) && available(target);
+
+    $('btn-skl').disabled = !canPlay || !canUseSkill;
+
+    $('btn-int').disabled =
+      !canPlay ||
+      !Interfaces.IInteractable(target) ||
+      !available(target);
+
+    $('btn-next').hidden = !state.cleared || state.ended;
+    $('btn-next').disabled = !canPlay;
+
+    $('btn-next').textContent = state.stage === 3
+      ? '모험 완료하기'
+      : '다음 스테이지 · 체력 30 회복';
+  }
+
+  /*
+   * 8. 턴 처리
+   *
+   * 플레이어 행동
+   * → 생존한 적 반격
+   * → 승패 확인
+   * → 화면 갱신
+   */
+  function performAction(action) {
+    if (action === 'restart') {
+      state.hero = null;
+      state.entities = [];
+      state.ended = false;
+
+      $('main-screen').style.display = 'none';
+      $('setup-screen').style.display = 'block';
+      $('stage-badge').textContent = '직업 선택 대기';
+
+      $('class-selector').querySelector('button').focus();
+      return;
+    }
+
+    if (!state.hero || state.ended || state.busy) {
+      return;
+    }
+
+    if (action === 'next') {
+      if (!state.cleared) return;
+
+      if (state.stage === 3) {
+        state.ended = true;
+
+        log(
+          `[승리] 모든 스테이지 완료! 최종 골드 ${state.hero.gold} G`,
+          'log-sys'
+        );
+
+        render();
+        return;
+      }
+
+      state.stage++;
+
+      const restored = Math.min(
+        30,
+        state.hero.maxHp - state.hero.hp
+      );
+
+      state.hero.hp += restored;
+
+      log(`[휴식] 체력 ${restored} 회복`, 'log-int');
+      loadStage();
+      return;
+    }
+
+    const target = state.entities[state.selected];
+
+    const damageTarget =
+      Interfaces.IDamageable(target) && available(target);
+
+    // 버튼 상태와 별도로 함수에서도 대상을 검사합니다.
+    if (action === 'attack' && !damageTarget) {
+      return;
+    }
+
+    if (
+      action === 'skill' &&
+      !(state.hero instanceof Mage) &&
+      !damageTarget
+    ) {
+      return;
+    }
+
+    if (
+      action === 'skill' &&
+      state.hero instanceof Mage &&
+      !state.entities.some(
+        entity =>
+          Interfaces.IDamageable(entity) &&
+          entity.isAlive()
+      )
+    ) {
+      return;
+    }
+
+    if (
+      action === 'interact' &&
+      (
+        !Interfaces.IInteractable(target) ||
+        !available(target)
+      )
+    ) {
+      return;
+    }
+
+    if (!['attack', 'skill', 'interact'].includes(action)) {
+      return;
+    }
+
+    state.busy = true;
+
+    log(`── ${state.turn}턴 ──`, 'log-sys');
+
+    if (action === 'attack') {
+      target.takeDamage(state.hero.atk);
+    } else if (action === 'skill') {
+      state.hero.useSkill(state.entities, target);
+    } else if (action === 'interact') {
+      target.interact(state.hero);
+    }
+
+    // 적만 반격합니다. 피격 가능한 사물인 배럴은 반격하지 않습니다.
+    const enemies = state.entities.filter(
+      entity =>
+        entity instanceof Enemy &&
+        entity.isAlive()
+    );
+
+    for (const enemy of enemies) {
+      if (!state.hero.isAlive()) break;
+
+      log(`[반격] ${enemy.name}의 공격`, 'log-dmg');
+      state.hero.takeDamage(enemy.atk);
+    }
+
+    state.turn++;
+
+    if (!state.hero.isAlive()) {
+      state.ended = true;
+
+      log(
+        '[패배] 체력이 0이 되었습니다. 직업을 다시 선택해 도전하세요.',
+        'log-sys'
+      );
+    } else if (enemies.length === 0 && !state.cleared) {
+      state.cleared = true;
+
+      log(
+        '[클리어] 적을 모두 처치했습니다. 남은 사물을 사용하거나 다음으로 진행하세요.',
+        'log-sys'
+      );
+    }
+
+    // 방금 선택한 대상이 사라졌다면 사용 가능한 첫 대상을 선택합니다.
+    if (!available(target)) {
+      state.selected = state.entities.findIndex(available);
+    }
+
+    state.busy = false;
+    render();
+  }
+
+  /*
+   * 9. 클릭 이벤트 연결
+   *
+   * 화면에 버튼이 보이는 것만으로 기능이 실행되지는 않습니다.
+   * addEventListener()로 클릭과 실행 함수를 연결해야 합니다.
+   *
+   * 상위 요소에 이벤트를 한 번 등록하는 '이벤트 위임' 방식을 사용하여
+   * 카드를 다시 그려도 클릭 기능이 유지되도록 합니다.
+   */
+  $('class-selector').addEventListener('click', event => {
+    const card = event.target.closest('[data-hero]');
+
+    if (card && $('class-selector').contains(card)) {
+      startGame(card.dataset.hero);
+    }
+  });
+
+  $('field-entities').addEventListener('click', event => {
+    const card = event.target.closest('[data-index]');
+
+    if (!card || card.disabled || state.ended) {
+      return;
+    }
+
+    const index = Number(card.dataset.index);
+
+    if (!available(state.entities[index])) {
+      return;
+    }
+
+    state.selected = index;
+    render();
+
+    // 카드가 다시 생성되므로 새 카드로 키보드 초점을 옮깁니다.
+    $('field-entities').children[index]?.focus();
+  });
+
+  $('action-buttons').addEventListener('click', event => {
+    const button = event.target.closest('[data-action]');
+
+    if (button && !button.disabled) {
+      performAction(button.dataset.action);
+    }
+  });
+}
+
+/*
+ * HTML 요소가 준비된 후 이벤트를 연결합니다.
+ * 이미 로딩이 끝난 경우에는 즉시 초기화합니다.
+ */
+if (document.readyState === 'loading') {
+  document.addEventListener(
+    'DOMContentLoaded',
+    initializeGame,
+    { once: true }
+  );
+} else {
+  initializeGame();
+}
+</script>
+</body>
+</html>

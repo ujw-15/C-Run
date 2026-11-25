@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Leam")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73b56dd6a26bb26606c3fbeef44019f3065958bb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+76aae5dd182c7d5fb84f4c42ff7042a5dd921313")]
 [assembly: System.Reflection.AssemblyProductAttribute("Leam")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Leam")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

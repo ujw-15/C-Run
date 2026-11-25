@@ -13,3 +13,11 @@ F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Run\Basic\Basic\obj\Debug
 F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Run\Basic\Basic\obj\Debug\net9.0\Basic.genruntimeconfig.cache
 F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Run\Basic\Basic\obj\Debug\net9.0\ref\Basic.dll
 F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Run\Basic\Basic\obj\Debug\net9.0\Basic.sourcelink.json
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\Basic\Basic\obj\Debug\net9.0\Basic.GeneratedMSBuildEditorConfig.editorconfig
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\Basic\Basic\obj\Debug\net9.0\Basic.AssemblyInfoInputs.cache
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\Basic\Basic\obj\Debug\net9.0\Basic.AssemblyInfo.cs
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\Basic\Basic\obj\Debug\net9.0\Basic.csproj.CoreCompileInputs.cache
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\Basic\Basic\obj\Debug\net9.0\Basic.sourcelink.json
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\Basic\Basic\obj\Debug\net9.0\Basic.dll
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\Basic\Basic\obj\Debug\net9.0\refint\Basic.dll
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\Basic\Basic\obj\Debug\net9.0\Basic.pdb

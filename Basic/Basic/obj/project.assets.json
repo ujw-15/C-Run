@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\Basic.csproj",
+      "projectUniqueName": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Leam\\Basic\\Basic\\Basic.csproj",
       "projectName": "Basic",
-      "projectPath": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\Basic.csproj",
+      "projectPath": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Leam\\Basic\\Basic\\Basic.csproj",
       "packagesPath": "C:\\Users\\ums11\\.nuget\\packages\\",
-      "outputPath": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Run\\Basic\\Basic\\obj\\",
+      "outputPath": "F:\\UJW_DEV\\unity3\\CustomPackage\\Assets\\Custompackage\\C-Leam\\Basic\\Basic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ums11\\AppData\\Roaming\\NuGet\\NuGet.Config",
