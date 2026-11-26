@@ -8,8 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Class1.cs" />
     <Compile Remove="class예시.cs" />
     <Compile Remove="Program.cs" />
+    <Compile Remove="TetrisGame-v2.cs" />
+    <Compile Remove="TetrisGame.cs" />
+    <Compile Remove="클래스만들면서배우기.cs" />
   </ItemGroup>
 
 </Project>

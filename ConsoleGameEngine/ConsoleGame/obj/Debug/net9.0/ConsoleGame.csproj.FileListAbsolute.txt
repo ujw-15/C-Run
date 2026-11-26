@@ -1,0 +1,15 @@
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\ConsoleGameEngine\ConsoleGame\obj\Debug\net9.0\ConsoleGame.GeneratedMSBuildEditorConfig.editorconfig
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\ConsoleGameEngine\ConsoleGame\obj\Debug\net9.0\ConsoleGame.AssemblyInfoInputs.cache
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\ConsoleGameEngine\ConsoleGame\obj\Debug\net9.0\ConsoleGame.AssemblyInfo.cs
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\ConsoleGameEngine\ConsoleGame\obj\Debug\net9.0\ConsoleGame.csproj.CoreCompileInputs.cache
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\ConsoleGameEngine\ConsoleGame\obj\Debug\net9.0\ConsoleGame.sourcelink.json
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\ConsoleGameEngine\ConsoleGame\bin\Debug\net9.0\ConsoleGame.exe
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\ConsoleGameEngine\ConsoleGame\bin\Debug\net9.0\ConsoleGame.deps.json
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\ConsoleGameEngine\ConsoleGame\bin\Debug\net9.0\ConsoleGame.runtimeconfig.json
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\ConsoleGameEngine\ConsoleGame\bin\Debug\net9.0\ConsoleGame.dll
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\ConsoleGameEngine\ConsoleGame\bin\Debug\net9.0\ConsoleGame.pdb
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\ConsoleGameEngine\ConsoleGame\obj\Debug\net9.0\ConsoleGame.dll
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\ConsoleGameEngine\ConsoleGame\obj\Debug\net9.0\refint\ConsoleGame.dll
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\ConsoleGameEngine\ConsoleGame\obj\Debug\net9.0\ConsoleGame.pdb
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\ConsoleGameEngine\ConsoleGame\obj\Debug\net9.0\ConsoleGame.genruntimeconfig.cache
+F:\UJW_DEV\unity3\CustomPackage\Assets\Custompackage\C-Leam\ConsoleGameEngine\ConsoleGame\obj\Debug\net9.0\ref\ConsoleGame.dll
